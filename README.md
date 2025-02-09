@@ -122,7 +122,39 @@ This project integrates **multi-threading, distributed computing, and database-d
 
 The **Java Network Services Hub** demonstrates expertise in **software architecture, networking, and system design**. By integrating **high-performance computing, distributed systems, and interactive UI development**, it provides a **scalable and practical solution** for enterprise networking tools, system administration applications, and cloud-based service management.
 
-💼 Professional Takeaway
-------------------------
+🏃 How to Run
+-------------
 
-This project is a testament to **architectural expertise, problem-solving, and hands-on system design**. It is not just a technical showcase but a **real-world solution** built for **scalability, performance, and growth**.
+### Prerequisites
+
+*   **Java Development Kit (JDK 17+)** installed
+    
+*   **PostgreSQL database** (for logging, optional but recommended)
+    
+
+### Steps to Run
+
+1.  git clone https://github.com/AngelosFikias0/Java\_Network\_Services\_Hub.gitcd Java\_Network\_Services\_Hub
+    
+2.  javac -d bin -cp src src/com/networkhub/Main.java
+    
+3.  java -cp bin com.networkhub.Main
+    
+4.  **Start a Network Service**
+    
+    *   Open the **Graphical Service Launcher (Swing UI)**.
+        
+    *   Select a service (HTTP, TCP, UDP, RMI) and start it.
+        
+    *   Use external tools or client applications to interact with the running service.
+        
+5.  **(Optional) Setup PostgreSQL Logging**
+    
+    *   Update the config.properties file with database credentials.
+        
+    *   Ensure PostgreSQL is running and tables are created.
+        
+    *   The application will log network events automatically.
+        
+
+Your **Java Network Services Hub** is now up and running! 🎉
