@@ -1,160 +1,128 @@
-🚀 Java Network Services Hub
-============================
+# 🚀 Java Network Services Hub
 
-📌 Project Overview
--------------------
+> **A modular Java networking suite for managing HTTP, TCP, UDP, and RMI services within a unified system.**
 
-The **Java Network Services Hub** is a modular networking suite designed to manage multiple network services within a unified system. Built in Java, it features a graphical service launcher and supports four core communication protocols: **HTTP, TCP, UDP, and RMI**.
+The **Java Network Services Hub** is a multi-threaded, enterprise-ready networking platform built in Java. It integrates a graphical Swing UI, PostgreSQL logging, and modular service architecture, demonstrating advanced **network programming, concurrency, and system design**.
 
-This project integrates **multi-threading, distributed computing, and database-driven logging**, showcasing expertise in **network programming and software engineering**. Its clean, scalable architecture provides a strong foundation for **enterprise-level networking solutions**.
+---
 
-✨ Key Features
---------------
+## 📌 System Overview
 
-### 🎛 Graphical Service Launcher (Java Swing UI)
+The architecture follows a **Client–Server Modular Design**:
 
-*   **Intuitive Interface**: Seamless service execution with a modern UI.
-    
-*   **Multi-threaded Execution**: Ensures efficiency without UI interruption.
-    
-*   **Real-time Feedback**: Dynamic styling and status updates.
-    
+```text
+    Graphical Service Launcher
+        |
+        v
+   Service Modules
+    /    |    |    \
+   v     v    v     v
+HTTP   TCP   UDP   RMI
+ |      |     |     |
+ v      v     v     v
+PostgreSQL Logging
+```
 
-### 🌐 HTTP Server Module
+- **Frontend:** Java Swing UI for real-time service management and control.
+- **Backend:** Modular Java services handling diverse protocols (HTTP, TCP, UDP, RMI).
+- **Database:** PostgreSQL with structured logging and referential integrity.
 
-*   **Embedded Server**: Handles GET/POST requests, extendable for RESTful APIs.
-    
-*   **Lightweight & Scalable**: Efficient request handling with minimal resources.
-    
+---
 
-### 🔌 TCP Communication Module
+## ✨ Key Features
 
-*   **Reliable Communication**: Uses ServerSocket and Socket for secure data exchange.
-    
-*   **Multi-client Support**: Optimized threading for concurrent connections.
-    
+### 🎛 Graphical Service Launcher
 
-### 📡 UDP Communication Module
+- **Multi-threaded Swing UI:** Manages service lifecycles without freezing the interface.
+- **Real-time Status:** Dynamic feedback on active network modules and port usage.
 
-*   **High-Speed Messaging**: Implements DatagramSocket for low-latency communication.
-    
-*   **Asynchronous Processing**: Ideal for real-time applications.
-    
-*   **PostgreSQL Logging**: Captures network activity for analysis.
-    
+### 🌐 Protocol Modules
 
-### 🔗 RMI (Remote Method Invocation) Module
+- **HTTP Server:** Handles GET/POST requests; designed to be extendable for REST APIs.
+- **TCP Module:** Reliable multi-client communication using `ServerSocket` and optimized thread pooling.
+- **UDP Module:** Low-latency, asynchronous message exchange using `DatagramSocket`.
+- **RMI Module:** Distributed computing support via RMI Registry and remote interfaces.
 
-*   **Distributed Computing**: Enables remote method execution over a network.
-    
-*   **Scalable Architecture**: Implements RMI Registry, Remote Interfaces, and client-server communication.
-    
+### 📊 Advanced Data Handling
 
-🛠️ Technologies & Methodologies
---------------------------------
+- **PostgreSQL Integration:** Centralized logging of all network events and client interactions.
+- **Relational Integrity:** Uses `ON DELETE CASCADE` for clean data management.
+- **Transaction Safety:** Critical operations like port reservation and logging are wrapped in transactions.
 
-### Core Technologies
+---
 
-*   **Java**: Primary programming language.
-    
-*   **Java Sockets**: TCP/UDP networking.
-    
-*   **Java RMI**: Enables distributed computing.
-    
-*   **PostgreSQL (JDBC)**: Logs network activity.
-    
-*   **Java Swing**: Provides an interactive UI.
-    
+## 🧰 Technical Stack
 
-### Advanced Principles
+| Area            | Technology                                |
+| :-------------- | :---------------------------------------- |
+| **Programming** | Java 17+                                  |
+| **Networking**  | TCP, UDP, HTTP, RMI                       |
+| **UI**          | Swing                                     |
+| **Database**    | PostgreSQL (JDBC)                         |
+| **Concurrency** | Java Concurrency API (Threads, Executors) |
+| **Build Tools** | Git (Optional: Maven / Gradle)            |
 
-*   **Multi-threading & Concurrency**: Ensures performance without bottlenecks.
-    
-*   **Java Reflection**: Enables dynamic service execution.
-    
-*   **Exception Handling & Logging**: Robust error management.
-    
-*   **Modular Design**: Simplifies future expansion.
-    
+---
 
-🔍 How It Works
----------------
+## 🗄 Database Design
 
-1.  **Launch the Service Manager**: Access all network services through the Swing UI.
-    
-2.  **Select & Start a Service**: Choose HTTP, TCP, UDP, or RMI, each running in a dedicated thread.
-    
-3.  **Monitor & Interact**: Connect clients via external tools or built-in handlers.
-    
-4.  **Analyze Network Activity**: PostgreSQL logs provide insights.
-    
+The system relies on a robust relational schema optimized for high-frequency logging:
 
-👨‍💻 My Role & Contributions
------------------------------
+- **Predefined Queries:** Optimized for service statistics and historical analysis.
+- **Indexed Tables:** Fast lookups for specific client IPs and service event types.
+- **Optional Enhancements:** Support for PostgreSQL triggers for automated auditing and stored procedures for monitoring.
 
-*   **Designed and developed** the modular networking hub.
-    
-*   **Engineered a multi-threaded system** for scalability and performance.
-    
-*   **Implemented an interactive UI** for seamless service management.
-    
-*   **Integrated PostgreSQL** for real-time logging and analytics.
-    
-*   **Optimized reliability and performance** through advanced concurrency control and error handling.
-    
+---
 
-🚀 Future Enhancements
-----------------------
+## 🔍 How It Works
 
-*   **Enhance HTTP Server**: Add REST API support.
-    
-*   **Integrate TLS/SSL Encryption**: Secure communication.
-    
-*   **Real-Time Monitoring Dashboard**: Live insights into performance.
-    
-*   **Containerized Deployment**: Enable scalability with Docker and Kubernetes.
-    
-*   **Extend RMI Capabilities**: Optimize for microservices and distributed architectures.
-    
+1. **Launch:** Run the Graphical Service Launcher to view the unified dashboard.
+2. **Select & Start:** Choose a protocol (HTTP, TCP, UDP, or RMI). Each runs in its own dedicated thread.
+3. **Connect:** Interact with the services via browser, terminal (Telnet/Netcat), or custom RMI clients.
+4. **Audit:** Review real-time logs stored in the PostgreSQL database for security and performance analysis.
 
-🌟 Why This Project Matters
----------------------------
+---
 
-The **Java Network Services Hub** demonstrates expertise in **software architecture, networking, and system design**. By integrating **high-performance computing, distributed systems, and interactive UI development**, it provides a **scalable and practical solution** for enterprise networking tools, system administration applications, and cloud-based service management.
+## 🚀 Future Enhancements
 
-🏃 How to Run
--------------
+- [ ] Add TLS/SSL encryption for secure communication.
+- [ ] Integrate a real-time monitoring dashboard with JavaFX.
+- [ ] Containerize the hub using **Docker** for cloud deployment.
+- [ ] Implement rate limiting and API usage monitoring.
 
-### Prerequisites
+---
 
-*   **Java Development Kit (JDK 17+)** installed
-    
-*   **PostgreSQL database** (for logging, optional but recommended)
-    
+## 🏃 Installation & Setup
 
-### Steps to Run
+### 1️⃣ Clone the Repository
 
-1.  git clone https://github.com/AngelosFikias0/Java\_Network\_Services\_Hub.gitcd Java\_Network\_Services\_Hub
-    
-2.  javac -d bin -cp src src/com/networkhub/Main.java
-    
-3.  java -cp bin com.networkhub.Main
-    
-4.  **Start a Network Service**
-    
-    *   Open the **Graphical Service Launcher (Swing UI)**.
-        
-    *   Select a service (HTTP, TCP, UDP, RMI) and start it.
-        
-    *   Use external tools or client applications to interact with the running service.
-        
-5.  **(Optional) Setup PostgreSQL Logging**
-    
-    *   Update the config.properties file with database credentials.
-        
-    *   Ensure PostgreSQL is running and tables are created.
-        
-    *   The application will log network events automatically.
-        
+```bash
+git clone [https://github.com/AngelosFikias0/Java_Network_Services_Hub.git](https://github.com/AngelosFikias0/Java_Network_Services_Hub.git)
+cd Java_Network_Services_Hub
+```
 
-Your **Java Network Services Hub** is now up and running! 🎉
+### 2️⃣ Compilation
+
+```bash
+# Create a bin directory for compiled classes
+mkdir bin
+javac -d bin -cp src src/com/networkhub/Main.java
+```
+
+### 3️⃣ Run the Application
+
+```bash
+java -cp bin com.networkhub.Main
+```
+
+> **Note:** Ensure your PostgreSQL instance is running and update `config.properties` with your database credentials to enable logging features.
+
+---
+
+## 🌟 Why This Project Matters
+
+This project demonstrates the ability to build **scalable, distributed systems** using core Java. It showcases mastery over protocol implementation, thread safety, and the integration of persistent storage in a high-concurrency environment.
+
+---
+
+**🔗 Resources:** [GitHub Repository](https://github.com/AngelosFikias0/Java_Network_Services_Hub) | [Documentation](./Analysis)

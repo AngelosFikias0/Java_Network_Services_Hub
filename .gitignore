@@ -1,0 +1,21 @@
+# Eclipse compiled class files
+bin/
+*.class
+
+# Logs
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Eclipse workspace settings (optional)
+.settings/
+
+# Build artifacts (if you ever add jars)
+*.jar
+*.war
+*.ear
+
+# Temporary files
+*.tmp
