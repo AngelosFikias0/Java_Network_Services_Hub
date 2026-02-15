@@ -1,4 +1,4 @@
-# 🚀 Java Network Services Hub
+# Java Network Services Hub
 
 > **A modular Java networking suite for managing HTTP, TCP, UDP, and RMI services within a unified system.**
 
