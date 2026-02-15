@@ -12,10 +12,14 @@ Thumbs.db
 # Eclipse workspace settings (optional)
 .settings/
 
-# Build artifacts (if you ever add jars)
+# Build artifacts
 *.jar
 *.war
 *.ear
 
 # Temporary files
 *.tmp
+
+# Ignore project-specific Eclipse metadata only if you don't share
+# .project
+# .classpath
