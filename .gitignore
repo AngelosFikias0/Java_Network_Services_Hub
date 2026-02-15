@@ -20,6 +20,6 @@ Thumbs.db
 # Temporary files
 *.tmp
 
-# Ignore project-specific Eclipse metadata only if you don't share
+# Ignore project-specific Eclipse metadata
 .project
 .classpath
